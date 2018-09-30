@@ -30,3 +30,12 @@ A feladatban egy autentikációhoz kötött recept-gyűjteményt valósítunk me
 
 Egy REST API amely Spring Boot segítségével készül el MVC pattern alapján, valamint egy Angular frontend, amely a felhasználói felületet biztosítja, törekszünk az MVVM pattern megtartására. Az adatokat H2 adatbázisban tárljuk a memóriában
 
+<h1>Használati eset modell</h1>
+
+<h3>Szerepkörök</h3>
+
+    Vendég
+    Regisztrált felhasználó
+    Admin
+
+![usecaseDiagram](/img/AlkFejlUseCaseDiagram.jpg)
