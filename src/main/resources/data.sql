@@ -8,6 +8,11 @@ INSERT INTO
 VALUES
     (1, 'Marjai Peter', 'Nagyon finom.', 1);
 
+/*INSERT INTO
+    users(id, firstName, lastName, recipe_id)
+VALUES
+    (1, 'Marjai', 'Peter', 1);*/
+
 
 INSERT INTO
     ingredients(id, name)
