@@ -40,6 +40,9 @@ public class Recipe {
     @OneToMany(mappedBy = "recipe")
     private List<Comment> comments;
 
+    @OneToMany(mappedBy = "recipe")
+    private List<User> users;
+
     @ManyToMany
     @JoinTable
     private List<Ingredient> ingredients;
