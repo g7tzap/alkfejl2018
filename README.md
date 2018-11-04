@@ -65,3 +65,7 @@ Egy REST API amely Spring Boot segítségével készül el MVC pattern alapján,
      <li> PUT /ingredients/:id Egy hozzávaló adatainak módosítása </li>
      <li> DELETE /ingredients/:id Szoba törlése </li>
 </ul>
+
+<h3>Könyvtárszerkezet</h3<
+
+![konyvtarszerkezet](/img/konyvtar.jpg)
