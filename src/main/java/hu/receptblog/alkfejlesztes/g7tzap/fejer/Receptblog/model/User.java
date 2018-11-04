@@ -27,10 +27,19 @@ public class User {
     private int id;
 
     @Column
-    private String firstName;
+    private String firstname;
 
     @Column
-    private String lastName;
+    private String lastname;
+
+    @Column
+    private String password;
+
+    @Column
+    private String username;
+
+    @Column
+    private String role;
 
     @ManyToOne
     @JoinColumn
