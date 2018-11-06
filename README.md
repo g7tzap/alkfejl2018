@@ -72,4 +72,4 @@ Egy REST API amely Spring Boot segítségével készül el MVC pattern alapján,
 
 <h3>Adatbázis szerkezet</h3>
 
-![adatbazisszerkezet](/img/AlkFejlDatabase.png)
+![adatbazisszerkezet](/img/AlkFejlDatabaseUML.png)
