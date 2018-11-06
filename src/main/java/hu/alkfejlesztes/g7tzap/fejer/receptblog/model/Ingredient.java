@@ -12,7 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.ManyToMany;
-import javax.persistence.JoinColumn;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import hu.alkfejlesztes.g7tzap.fejer.receptblog.model.Recipe;
