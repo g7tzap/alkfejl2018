@@ -1,18 +1,17 @@
 INSERT INTO
-    recipes(id, author, title, text)
+    users(id, firstname, lastname, username, password, role)
 VALUES
-    (1, 'Marjai Peter', 'Fott rizs', 'Fozd meg a rizset sos vizben');
+    (1, 'Marjai', 'Peter','mrpetko','password','user');
+
+INSERT INTO
+    recipes(id, author, title, text, user_id)
+VALUES
+    (1, 'Marjai Peter', 'Fott rizs', 'Fozd meg a rizset sos vizben', 1);
 
 INSERT INTO
     comments(id, author, text, recipe_id)
 VALUES
     (1, 'Marjai Peter', 'Nagyon finom.', 1);
-
-INSERT INTO
-    users(id, firstname, lastname, username, password, role, recipe_id)
-VALUES
-    (1, 'Marjai', 'Peter','mrpetko','password','user', 1);
-
 
 INSERT INTO
     ingredients(id, name)

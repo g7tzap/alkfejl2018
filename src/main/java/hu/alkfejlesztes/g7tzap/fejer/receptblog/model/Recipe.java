@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.JoinTable;
 
 //import hu.receptblog.alkfejlesztes.g7tzap.fejer.Receptblog.model.Ingredients;
@@ -40,8 +41,8 @@ public class Recipe {
     @OneToMany(mappedBy = "recipe")
     private List<Comment> comments;
 
-    @OneToMany(mappedBy = "recipe")
-    private List<User> users;
+    @ManyToOne
+    private User user;
 
     @ManyToMany
     @JoinTable
