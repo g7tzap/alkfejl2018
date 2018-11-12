@@ -1,15 +1,15 @@
 package hu.alkfejlesztes.g7tzap.fejer.receptblog.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -43,8 +43,7 @@ public class User {
     @Column
     private String role;
 
-    @ManyToOne
-    @JoinColumn
+    @OneToMany(mappedBy = "user")
     @JsonIgnore
     private List<Recipe> recipes;
 }
