@@ -8,11 +8,15 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private UserDetailsService userDetailsService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -21,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .csrf()
                 .disable() // H2 Console
             .authorizeRequests()
-                .antMatchers("/h2/**")
+                .antMatchers("/h2/**", "/api/user")
                     .permitAll() // H2 Console
                 .anyRequest()
                     .authenticated()
@@ -40,10 +44,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configureGlobal(AuthenticationManagerBuilder auth)
         throws Exception {
 
-        auth.inMemoryAuthentication()
-            .withUser("user")
-                .password("$2a$10$eVzYfNIu4amd91EB4pxguerPgOaBd.BGwlZzPGDIyWJr.qxhUd0KC")
-                .roles("USER"); 
+            auth.userDetailsService(userDetailsService)
+            .passwordEncoder(passwordEncoder());
     }
 
     @Bean

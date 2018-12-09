@@ -23,7 +23,7 @@ import hu.alkfejlesztes.g7tzap.fejer.receptblog.model.Recipe;
 public class Comment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column
