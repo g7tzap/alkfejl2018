@@ -26,7 +26,7 @@ import javax.persistence.JoinTable;
 public class Recipe {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column
