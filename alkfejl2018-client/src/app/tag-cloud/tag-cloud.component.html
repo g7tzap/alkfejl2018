@@ -1,0 +1,6 @@
+<h5>Ingredients</h5>
+<ul>
+  <li *ngFor="let ingredient of ingredients | async">
+    <a routerLink="/ingredient/{{ ingredient.name }}">{{ ingredient.name }}</a>
+  </li>
+</ul>

@@ -1,0 +1,11 @@
+<div class="card" *ngFor="let recipe of recipes | async">
+  <div class="card-body">
+    <h5 class="card-title">{{ recipe.title }}</h5>
+    <p class="card-text">{{ recipe.text }}</p>
+    <div class="tag-container">
+      <span class="badge badge-secondary" *ngFor="let ingredient of recipe.ingredients">{{ ingredient.name }}</span>
+    </div>
+    <a routerLink="/post/{{ recipe.id }}/edit" class="card-link">Edit</a>
+    <a routerLink="/post/{{ recipe.id }}/confirm-delete" class="card-link">Delete</a>
+  </div>
+</div>
